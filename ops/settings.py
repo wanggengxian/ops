@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'cabinet.apps.CabinetConfig',
     'users.apps.UsersConfig',
     'manufacturer.apps.ManufacturerConfig',
+    'servers.apps.ServersConfig'
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'devops',
-        'USER': 'root',
+        'USER': 'ronin',
         'PASSWORD': 'ttiswsy.1006',
         'HOST': '127.0.0.1',
         'PORT': 3306,
@@ -216,7 +217,7 @@ LOGGING = {
             'propagate': False,
         }
     },
-    'root':{
+    'root': {
         "level": "DEBUG",
         "handlers": ["file"],
     }
