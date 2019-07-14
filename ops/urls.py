@@ -22,13 +22,18 @@ from users.views import UserViewset
 from idcs.views import IdcViewset
 from cabinet.views import CabinetViewset
 from manufacturer.views import ManufacturerViewset, ProductModelViewset
+from servers.views import ServerAutoReportViewset, NetworkDeviceViewset, IPViewset, ServerViewset
 
 route = DefaultRouter()
 route.register('idcs', IdcViewset, base_name='idcs')
 route.register('users', UserViewset, base_name='users')
 route.register("cabinet", CabinetViewset, base_name="cabinet")
 route.register("Manufacturer", ManufacturerViewset, base_name="Manufacturer")
+route.register("ServerAutoReport", ServerAutoReportViewset, base_name="ServerAutoReport")
 route.register("ProductModel", ProductModelViewset, base_name="ProductModel")
+route.register("Servers", ServerViewset, base_name="Servers")
+route.register("NetworkDevice", NetworkDeviceViewset, base_name="NetworkDevice")
+route.register("IP", IPViewset, base_name="IP")
 
 urlpatterns = [
     url(r'^', include(route.urls)),

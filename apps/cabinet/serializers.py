@@ -8,6 +8,9 @@ class CabinetSerializer(serializers.Serializer):
     name = serializers.CharField(required=True)
 
     def to_representation(self, instance):
+        """
+        自定义序列化
+        """
         idc_obj = instance.idc
         ret = super(CabinetSerializer, self).to_representation(instance)
         ret["idc"] = {
